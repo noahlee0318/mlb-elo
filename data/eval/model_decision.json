@@ -1,0 +1,15 @@
+{
+  "logreg_val_ll": 0.6801336829934961,
+  "histgb_val_ll": 0.6816985857875557,
+  "improvement": -0.0015649027940596305,
+  "threshold": 0.002,
+  "winner": "logreg",
+  "overridden": false,
+  "automatic_winner": "logreg",
+  "cfg_final": {
+    "learning_rate": 0.03,
+    "max_iter": 100,
+    "max_leaf_nodes": 15,
+    "l2_regularization": 1.0
+  }
+}

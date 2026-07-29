@@ -1,0 +1,37 @@
+# ---- Python ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ---- Refresh runtime artifacts (never commit) ----
+*.bak
+*.dref.bak
+*.tmp
+*.restore.tmp
+data/.refresh.lock
+data/games.csv.retired
+
+# ---- Large, regenerable data (rebuilt via the documented build commands) ----
+# Raw API cache + per-season boxscore ZIP archives (~600 MB)
+data/raw/
+# Heavy derived tables (batter_games 66 MB, pitcher_games 30 MB, features 7 MB)
+data/batter_games.csv
+data/pitcher_games.csv
+data/features.csv
+
+# Kept in the repo so a clone runs the Elo app immediately (small):
+#   data/games_full.csv, data/ratings.csv, data/predictions.csv,
+#   models/, data/eval/
+# To make this a code-only repo instead, also ignore:
+#   data/
+#   models/

@@ -1,0 +1,117 @@
+{
+  "dates": [
+    {
+      "date": "2018-04-02",
+      "games": [
+        {
+          "gamePk": 1001,
+          "season": "2018",
+          "officialDate": "2018-04-02",
+          "gameDate": "2018-04-02T23:05:00Z",
+          "gameType": "R",
+          "status": {"abstractGameState": "Final", "detailedState": "Final"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "venue": {"id": 3},
+          "linescore": {"scheduledInnings": 9, "currentInning": 9},
+          "decisions": {"winner": {"id": 500}, "loser": {"id": 501}},
+          "teams": {
+            "home": {"team": {"id": 147, "name": "New York Yankees"}, "score": 5,
+                     "isWinner": true, "leagueRecord": {"wins": 1, "losses": 0},
+                     "probablePitcher": {"id": 700}},
+            "away": {"team": {"id": 141, "name": "Toronto Blue Jays"}, "score": 3,
+                     "isWinner": false, "leagueRecord": {"wins": 0, "losses": 1},
+                     "probablePitcher": {"id": 701}}
+          }
+        }
+      ]
+    },
+    {
+      "date": "2017-05-15",
+      "games": [
+        {
+          "gamePk": 1004,
+          "season": "2017",
+          "officialDate": "2017-05-15",
+          "gameDate": "2017-05-15T23:10:00Z",
+          "gameType": "R",
+          "status": {"abstractGameState": "Preview", "detailedState": "Postponed"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "venue": {"id": 7},
+          "rescheduledFrom": "2017-05-14T23:10:00Z",
+          "teams": {
+            "home": {"team": {"id": 121, "name": "New York Mets"},
+                     "leagueRecord": {"wins": 20, "losses": 15}},
+            "away": {"team": {"id": 143, "name": "Philadelphia Phillies"},
+                     "leagueRecord": {"wins": 15, "losses": 20}}
+          }
+        }
+      ]
+    },
+    {
+      "date": "2019-07-04",
+      "games": [
+        {
+          "gamePk": 1002,
+          "season": "2019",
+          "officialDate": "2019-07-04",
+          "gameDate": "2019-07-04T16:05:00Z",
+          "gameType": "R",
+          "status": {"abstractGameState": "Final", "detailedState": "Final"},
+          "doubleHeader": "S",
+          "gameNumber": 1,
+          "venue": {"id": 3289},
+          "linescore": {"scheduledInnings": 9, "currentInning": 9},
+          "teams": {
+            "home": {"team": {"id": 111, "name": "Boston Red Sox"}, "score": 4,
+                     "isWinner": true, "leagueRecord": {"wins": 50, "losses": 39}},
+            "away": {"team": {"id": 112, "name": "Chicago Cubs"}, "score": 1,
+                     "isWinner": false, "leagueRecord": {"wins": 45, "losses": 44}}
+          }
+        },
+        {
+          "gamePk": 1003,
+          "season": "2019",
+          "officialDate": "2019-07-04",
+          "gameDate": "2019-07-04T23:35:00Z",
+          "gameType": "R",
+          "status": {"abstractGameState": "Final", "detailedState": "Final"},
+          "doubleHeader": "S",
+          "gameNumber": 2,
+          "venue": {"id": 3289},
+          "linescore": {"scheduledInnings": 9, "currentInning": 9},
+          "teams": {
+            "home": {"team": {"id": 111, "name": "Boston Red Sox"}, "score": 2,
+                     "isWinner": false, "leagueRecord": {"wins": 50, "losses": 40}},
+            "away": {"team": {"id": 112, "name": "Chicago Cubs"}, "score": 6,
+                     "isWinner": true, "leagueRecord": {"wins": 46, "losses": 44}}
+          }
+        }
+      ]
+    },
+    {
+      "date": "2016-08-20",
+      "games": [
+        {
+          "gamePk": 1005,
+          "season": "2016",
+          "officialDate": "2016-08-20",
+          "gameDate": "2016-08-21T00:10:00Z",
+          "gameType": "R",
+          "status": {"abstractGameState": "Final", "detailedState": "Final"},
+          "doubleHeader": "N",
+          "gameNumber": 1,
+          "venue": {"id": 15},
+          "linescore": {"scheduledInnings": 9, "currentInning": 11},
+          "teams": {
+            "home": {"team": {"id": 119, "name": "Los Angeles Dodgers"}, "score": 3,
+                     "isWinner": false, "leagueRecord": {"wins": 70, "losses": 54}},
+            "away": {"team": {"id": 137, "name": "San Francisco Giants"}, "score": 4,
+                     "isWinner": true, "leagueRecord": {"wins": 68, "losses": 56}}
+          }
+        }
+      ]
+    }
+  ]
+}

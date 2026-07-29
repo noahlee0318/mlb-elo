@@ -1,0 +1,42 @@
+{
+  "FEATURE_COLUMNS": [
+    "home_form_15",
+    "away_form_15",
+    "home_run_diff_pg",
+    "away_run_diff_pg",
+    "home_rest_days",
+    "away_rest_days",
+    "home_sp_fip_60",
+    "away_sp_fip_60",
+    "home_sp_k_rate",
+    "away_sp_k_rate",
+    "away_tz_delta"
+  ],
+  "base_trained_on": "tune",
+  "base_train_seasons": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022
+  ],
+  "calibrator_fit_on": "val",
+  "calibrator_val_seasons": [
+    2023
+  ],
+  "method": "sigmoid",
+  "cv": "prefit",
+  "cv_mechanism": "FrozenEstimator(base) \u2014 sklearn 1.9.0 removed the cv='prefit' string; FrozenEstimator gives the identical frozen-base guarantee (base never refit, sigmoid fit on val only).",
+  "method_choice": "Sigmoid (Platt), not isotonic. The boosted base was already well-calibrated (raw ECE 0.018); Platt was applied for a mild monotonic adjustment and to keep the output range within the realistic ~0.35-0.68 band. Isotonic was rejected: on a single validation season (~2,400 games) it was too sparse in the upper tail and manufactured overconfident 0.8+ predictions the raw model never had, while degrading the well-populated 0.6 bin.",
+  "cfg_final": {
+    "learning_rate": 0.03,
+    "max_iter": 100,
+    "max_leaf_nodes": 15,
+    "l2_regularization": 1.0
+  },
+  "sklearn_version": "1.9.0",
+  "random_state": 42,
+  "note": "DEPLOYMENT model. Distinct from models/histgb.joblib (Chunk 7, 8-season full-train). Base here is 7-season tune; sigmoid calibrator fit on held-out val 2023."
+}

@@ -1,0 +1,30 @@
+{
+  "FEATURE_COLUMNS": [
+    "home_form_15",
+    "away_form_15",
+    "home_run_diff_pg",
+    "away_run_diff_pg",
+    "home_rest_days",
+    "away_rest_days",
+    "home_sp_fip_60",
+    "away_sp_fip_60",
+    "home_sp_k_rate",
+    "away_sp_k_rate",
+    "away_tz_delta"
+  ],
+  "C_final": 1.0,
+  "train_seasons": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023
+  ],
+  "sklearn_version": "1.9.0",
+  "train_home_win_rate": 0.5347064178425125,
+  "random_state": 42,
+  "max_iter": 5000
+}

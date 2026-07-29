@@ -1,0 +1,214 @@
+{
+  "games": {
+    "9001": {
+      "comment": "regulation complete game; home wins 5-3 after leading through top 9 (away pitched 24 outs)",
+      "meta": {"game_pk": 9001, "season": 2019, "date": "2019-06-01", "game_type": "R",
+               "winning_pitcher_id": 101, "losing_pitcher_id": 201},
+      "box": {
+        "teams": {
+          "home": {
+            "team": {"id": 111},
+            "pitchers": [101],
+            "battingOrder": [111001, 111002, 111003, 111004, 111005, 111006, 111007, 111008, 111009],
+            "players": {
+              "ID101": {"person": {"id": 101, "fullName": "Homer Ace"},
+                        "position": {"abbreviation": "P"},
+                        "stats": {"pitching": {"inningsPitched": "9.0", "battersFaced": 33,
+                                  "numberOfPitches": 110, "strikes": 72, "hits": 6, "runs": 3,
+                                  "earnedRuns": 3, "homeRuns": 1, "strikeOuts": 9,
+                                  "baseOnBalls": 1, "intentionalWalks": 0, "hitByPitch": 0,
+                                  "groundOuts": 9, "airOuts": 9, "wildPitches": 0, "balks": 0,
+                                  "inheritedRunners": 0, "inheritedRunnersScored": 0,
+                                  "gamesStarted": 1, "completeGames": 1, "shutouts": 0,
+                                  "note": "(W, 8-4)"}}},
+              "ID111001": {"person": {"id": 111001, "fullName": "H One"}, "battingOrder": "100",
+                           "position": {"abbreviation": "SS"},
+                           "stats": {"batting": {"plateAppearances": 4, "atBats": 4, "runs": 2,
+                                     "hits": 2, "doubles": 1, "triples": 0, "homeRuns": 1,
+                                     "rbi": 2, "baseOnBalls": 0, "intentionalWalks": 0,
+                                     "strikeOuts": 1, "hitByPitch": 0, "sacBunts": 0,
+                                     "sacFlies": 0, "stolenBases": 0, "caughtStealing": 0,
+                                     "groundIntoDoublePlay": 0, "leftOnBase": 1, "totalBases": 6}}},
+              "ID111002": {"person": {"id": 111002, "fullName": "H Two"}, "battingOrder": "200",
+                           "position": {"abbreviation": "2B"},
+                           "stats": {"batting": {"plateAppearances": 4, "atBats": 3, "runs": 1,
+                                     "hits": 1, "doubles": 0, "triples": 0, "homeRuns": 0,
+                                     "rbi": 1, "baseOnBalls": 1, "intentionalWalks": 0,
+                                     "strikeOuts": 0, "hitByPitch": 0, "sacBunts": 0,
+                                     "sacFlies": 0, "stolenBases": 1, "caughtStealing": 0,
+                                     "groundIntoDoublePlay": 0, "leftOnBase": 0, "totalBases": 1}}},
+              "ID111003": {"person": {"id": 111003, "fullName": "H Three"}, "battingOrder": "300",
+                           "position": {"abbreviation": "1B"},
+                           "stats": {"batting": {"plateAppearances": 4, "atBats": 4, "runs": 2,
+                                     "hits": 2, "doubles": 0, "triples": 0, "homeRuns": 2,
+                                     "rbi": 2, "baseOnBalls": 0, "intentionalWalks": 0,
+                                     "strikeOuts": 0, "hitByPitch": 0, "sacBunts": 0,
+                                     "sacFlies": 0, "stolenBases": 0, "caughtStealing": 0,
+                                     "groundIntoDoublePlay": 1, "leftOnBase": 0, "totalBases": 8}}},
+              "ID111009": {"person": {"id": 111009, "fullName": "H Runner"}, "battingOrder": "901",
+                           "position": {"abbreviation": "PR"},
+                           "stats": {"batting": {"plateAppearances": 0, "atBats": 0, "runs": 0,
+                                     "hits": 0, "doubles": 0, "triples": 0, "homeRuns": 0,
+                                     "rbi": 0, "baseOnBalls": 0, "intentionalWalks": 0,
+                                     "strikeOuts": 0, "hitByPitch": 0, "sacBunts": 0,
+                                     "sacFlies": 0, "stolenBases": 0, "caughtStealing": 0,
+                                     "groundIntoDoublePlay": 0, "leftOnBase": 0, "totalBases": 0}}}
+            }
+          },
+          "away": {
+            "team": {"id": 222},
+            "pitchers": [201, 202],
+            "battingOrder": [222001],
+            "players": {
+              "ID201": {"person": {"id": 201, "fullName": "Road Starter"},
+                        "position": {"abbreviation": "P"},
+                        "stats": {"pitching": {"inningsPitched": "6.0", "battersFaced": 26,
+                                  "numberOfPitches": 96, "strikes": 60, "hits": 8, "runs": 5,
+                                  "earnedRuns": 5, "homeRuns": 3, "strikeOuts": 5,
+                                  "baseOnBalls": 1, "intentionalWalks": 0, "hitByPitch": 0,
+                                  "groundOuts": 6, "airOuts": 7, "wildPitches": 1, "balks": 0,
+                                  "inheritedRunners": 0, "inheritedRunnersScored": 0,
+                                  "gamesStarted": 1, "completeGames": 0, "shutouts": 0,
+                                  "note": "(L, 3-6)"}}},
+              "ID202": {"person": {"id": 202, "fullName": "Road Reliever"},
+                        "position": {"abbreviation": "P"},
+                        "stats": {"pitching": {"inningsPitched": "2.0", "battersFaced": 7,
+                                  "numberOfPitches": 28, "strikes": 18, "hits": 1, "runs": 0,
+                                  "earnedRuns": 0, "homeRuns": 0, "strikeOuts": 2,
+                                  "baseOnBalls": 0, "intentionalWalks": 0, "hitByPitch": 0,
+                                  "groundOuts": 2, "airOuts": 2, "wildPitches": 0, "balks": 0,
+                                  "inheritedRunners": 1, "inheritedRunnersScored": 0,
+                                  "gamesStarted": 0, "completeGames": 0, "shutouts": 0}}},
+              "ID222001": {"person": {"id": 222001, "fullName": "A One"}, "battingOrder": "100",
+                           "position": {"abbreviation": "CF"},
+                           "stats": {"batting": {"plateAppearances": 4, "atBats": 4, "runs": 3,
+                                     "hits": 3, "doubles": 1, "triples": 1, "homeRuns": 1,
+                                     "rbi": 3, "baseOnBalls": 0, "intentionalWalks": 0,
+                                     "strikeOuts": 0, "hitByPitch": 0, "sacBunts": 0,
+                                     "sacFlies": 0, "stolenBases": 0, "caughtStealing": 1,
+                                     "groundIntoDoublePlay": 0, "leftOnBase": 0, "totalBases": 9}}}
+            }
+          }
+        }
+      }
+    },
+    "9003": {
+      "comment": "opener (3 outs, 5 BF) then bulk; away has a two-way player who pitched AND batted; extra innings (10)",
+      "meta": {"game_pk": 9003, "season": 2021, "date": "2021-08-10", "game_type": "R",
+               "winning_pitcher_id": 302, "losing_pitcher_id": 402},
+      "box": {
+        "teams": {
+          "home": {
+            "team": {"id": 333},
+            "pitchers": [301, 302],
+            "battingOrder": [333001],
+            "players": {
+              "ID301": {"person": {"id": 301, "fullName": "The Opener"},
+                        "position": {"abbreviation": "P"},
+                        "stats": {"pitching": {"inningsPitched": "1.0", "battersFaced": 5,
+                                  "numberOfPitches": 18, "strikes": 12, "hits": 1, "runs": 0,
+                                  "earnedRuns": 0, "homeRuns": 0, "strikeOuts": 1,
+                                  "baseOnBalls": 1, "intentionalWalks": 0, "hitByPitch": 0,
+                                  "groundOuts": 1, "airOuts": 1, "wildPitches": 0, "balks": 0,
+                                  "inheritedRunners": 0, "inheritedRunnersScored": 0,
+                                  "gamesStarted": 1, "completeGames": 0, "shutouts": 0}}},
+              "ID302": {"person": {"id": 302, "fullName": "Bulk Guy"},
+                        "position": {"abbreviation": "P"},
+                        "stats": {"pitching": {"inningsPitched": "9.0", "battersFaced": 34,
+                                  "numberOfPitches": 120, "strikes": 80, "hits": 5, "runs": 2,
+                                  "earnedRuns": 2, "homeRuns": 0, "strikeOuts": 8,
+                                  "baseOnBalls": 2, "intentionalWalks": 1, "hitByPitch": 1,
+                                  "groundOuts": 10, "airOuts": 8, "wildPitches": 0, "balks": 1,
+                                  "inheritedRunners": 0, "inheritedRunnersScored": 0,
+                                  "gamesStarted": 0, "completeGames": 0, "shutouts": 0,
+                                  "note": "(W, 4-2)"}}},
+              "ID333001": {"person": {"id": 333001, "fullName": "H Bat"}, "battingOrder": "100",
+                           "position": {"abbreviation": "LF"},
+                           "stats": {"batting": {"plateAppearances": 5, "atBats": 5, "runs": 3,
+                                     "hits": 2, "doubles": 0, "triples": 0, "homeRuns": 1,
+                                     "rbi": 2, "baseOnBalls": 0, "intentionalWalks": 0,
+                                     "strikeOuts": 2, "hitByPitch": 0, "sacBunts": 0,
+                                     "sacFlies": 0, "stolenBases": 0, "caughtStealing": 0,
+                                     "groundIntoDoublePlay": 0, "leftOnBase": 2, "totalBases": 5}}}
+            }
+          },
+          "away": {
+            "team": {"id": 444},
+            "pitchers": [660271, 402],
+            "battingOrder": [660271],
+            "players": {
+              "ID660271": {"person": {"id": 660271, "fullName": "Two Way"},
+                           "battingOrder": "100",
+                           "position": {"abbreviation": "P"},
+                           "stats": {
+                             "pitching": {"inningsPitched": "6.1", "battersFaced": 25,
+                               "numberOfPitches": 92, "strikes": 61, "hits": 4, "runs": 2,
+                               "earnedRuns": 2, "homeRuns": 1, "strikeOuts": 10,
+                               "baseOnBalls": 2, "intentionalWalks": 0, "hitByPitch": 0,
+                               "groundOuts": 4, "airOuts": 5, "wildPitches": 0, "balks": 0,
+                               "inheritedRunners": 0, "inheritedRunnersScored": 0,
+                               "gamesStarted": 1, "completeGames": 0, "shutouts": 0},
+                             "batting": {"plateAppearances": 5, "atBats": 4, "runs": 1,
+                               "hits": 2, "doubles": 1, "triples": 0, "homeRuns": 1,
+                               "rbi": 2, "baseOnBalls": 1, "intentionalWalks": 0,
+                               "strikeOuts": 1, "hitByPitch": 0, "sacBunts": 0,
+                               "sacFlies": 0, "stolenBases": 0, "caughtStealing": 0,
+                               "groundIntoDoublePlay": 0, "leftOnBase": 1, "totalBases": 6}}},
+              "ID402": {"person": {"id": 402, "fullName": "A Closer"},
+                        "position": {"abbreviation": "P"},
+                        "stats": {"pitching": {"inningsPitched": "2.2", "battersFaced": 12,
+                                  "numberOfPitches": 45, "strikes": 28, "hits": 3, "runs": 2,
+                                  "earnedRuns": 2, "homeRuns": 1, "strikeOuts": 3,
+                                  "baseOnBalls": 1, "intentionalWalks": 0, "hitByPitch": 0,
+                                  "groundOuts": 2, "airOuts": 3, "wildPitches": 0, "balks": 0,
+                                  "inheritedRunners": 0, "inheritedRunnersScored": 0,
+                                  "gamesStarted": 0, "completeGames": 0, "shutouts": 0,
+                                  "note": "(BS, 3)"}}}
+            }
+          }
+        }
+      }
+    },
+    "9004": {
+      "comment": "rain-shortened 5-inning game: home pitched 5 tops (15 outs), away 4 bottoms + 2 outs? no — called after top 5: away pitched 12 outs (4 bottoms)",
+      "meta": {"game_pk": 9004, "season": 2016, "date": "2016-04-20", "game_type": "R",
+               "winning_pitcher_id": 501, "losing_pitcher_id": 601},
+      "box": {
+        "teams": {
+          "home": {
+            "team": {"id": 555},
+            "pitchers": [501],
+            "battingOrder": [],
+            "players": {
+              "ID501": {"person": {"id": 501, "fullName": "Rain Winner"},
+                        "position": {"abbreviation": "P"},
+                        "stats": {"pitching": {"inningsPitched": "5.0", "battersFaced": 18,
+                                  "numberOfPitches": 70, "strikes": 44, "hits": 3, "runs": 1,
+                                  "earnedRuns": 1, "homeRuns": 0, "strikeOuts": 4,
+                                  "baseOnBalls": 1, "intentionalWalks": 0, "hitByPitch": 0,
+                                  "groundOuts": 6, "airOuts": 5, "wildPitches": 0, "balks": 0,
+                                  "inheritedRunners": 0, "inheritedRunnersScored": 0,
+                                  "gamesStarted": 1, "completeGames": 1, "shutouts": 0}}}
+            }
+          },
+          "away": {
+            "team": {"id": 666},
+            "pitchers": [601],
+            "battingOrder": [],
+            "players": {
+              "ID601": {"person": {"id": 601, "fullName": "Rain Loser"},
+                        "position": {"abbreviation": "P"},
+                        "stats": {"pitching": {"inningsPitched": "4.0", "battersFaced": 17,
+                                  "numberOfPitches": 65, "strikes": 40, "hits": 5, "runs": 3,
+                                  "earnedRuns": 3, "homeRuns": 1, "strikeOuts": 2,
+                                  "baseOnBalls": 1, "intentionalWalks": 0, "hitByPitch": 0,
+                                  "groundOuts": 5, "airOuts": 5, "wildPitches": 0, "balks": 0,
+                                  "inheritedRunners": 0, "inheritedRunnersScored": 0,
+                                  "gamesStarted": 1, "completeGames": 1, "shutouts": 0}}}
+            }
+          }
+        }
+      }
+    }
+  }
+}

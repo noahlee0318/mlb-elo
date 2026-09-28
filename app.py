@@ -22,6 +22,7 @@ from src.refresh import STALE_AFTER_HOURS, load_ratings
 from src.schedule import todays_date_str
 from src.score import score_latest_day
 from src.season_schedule import remaining_schedule, team_structure
+from src.season_results import official_results, results_season
 from src.simulate import simulate_season
 from src.standings import assign_playoff_labels, current_records, played_h2h
 
@@ -37,6 +38,28 @@ CELL_STYLE = "padding:10px 12px;border-bottom:1px solid rgba(128,128,128,0.3);"
 st.set_page_config(page_title="MLB Elo predictor", page_icon="⚾")
 
 st.title("MLB Elo — today's slate")
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def cached_season_status(today):
+    return results_season(today)
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def cached_season_results(season):
+    return official_results(season)
+
+
+season_today = todays_date_str()
+try:
+    results_year, regular_season_over = cached_season_status(season_today)
+except Exception:
+    results_year, regular_season_over = None, False
+
+if regular_season_over:
+    st.info(f"As of {datetime.strptime(season_today, '%Y-%m-%d'):%B %d, %Y}, "
+            f"the {results_year} regular season is over. "
+            "See Season results for the actual standings.")
 
 
 @st.cache_data(ttl=STALE_AFTER_HOURS * 3600, show_spinner=False)
@@ -67,8 +90,24 @@ else:
     st.caption("No graded predictions yet — the first score appears once "
                "a logged slate's games go final.")
 
-tab_slate, tab_proj, tab_h2h, tab_methods = st.tabs(
-    ["Today's slate", "Season projection", "H2H Sim", "Methods"])
+tab_slate, tab_results, tab_proj, tab_h2h, tab_methods = st.tabs(
+    ["Today's slate", "Season results", "Season projection", "H2H Sim", "Methods"])
+
+with tab_results:
+    if results_year is None:
+        st.warning("Season dates are temporarily unavailable. Reload to try again.")
+    else:
+        st.subheader(f"{results_year} regular-season results")
+        st.caption("Actual records from MLB • "
+                   + ("Regular season complete" if regular_season_over else
+                      "Season in progress") + f" • Retrieved as of {season_today}")
+        try:
+            for division, rows in cached_season_results(results_year):
+                st.markdown(f"**{division}**")
+                st.dataframe(pd.DataFrame(rows), hide_index=True)
+        except Exception:
+            st.warning("Official standings are temporarily unavailable. Reload to try again.")
+        st.markdown(f"[View official MLB standings](https://www.mlb.com/standings/{results_year})")
 
 
 @st.cache_data(ttl=STALE_AFTER_HOURS * 3600, show_spinner=False)
@@ -374,6 +413,8 @@ with tab_slate:
         cached_predictions.clear()
         cached_scoreline.clear()
         cached_remaining.clear()
+        cached_season_status.clear()
+        cached_season_results.clear()
         cached_projection.clear()
         with st.spinner("Updating data (finals, ratings, boxscores)…"):
             status = refresh_if_stale(force=True, with_boxscores=True)
@@ -413,6 +454,9 @@ with tab_slate:
         if offline:
             st.info("No predictions were logged for today yet — reconnect "
                     "and refresh to fetch the slate.")
+        elif regular_season_over:
+            st.info("The regular season is complete. View the actual standings "
+                    "in Season results; predictions return next regular season.")
         else:
             st.info("No MLB games scheduled today — off-day or All-Star "
                     "break. Check back tomorrow.")

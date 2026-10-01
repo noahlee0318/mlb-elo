@@ -38,6 +38,7 @@ CELL_STYLE = "padding:10px 12px;border-bottom:1px solid rgba(128,128,128,0.3);"
 st.set_page_config(page_title="MLB Elo predictor", page_icon="⚾")
 
 st.title("MLB Elo — today's slate")
+st.caption("NFL and NBA coming soon")
 
 
 @st.cache_data(ttl=3600, show_spinner=False)

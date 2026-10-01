@@ -7,8 +7,16 @@ model), a **Monte Carlo season simulator** with a full playoff bracket, and a
 against a naive home-team baseline (a constant 0.540, the league home-win rate)
 — the yardstick each model has to beat.
 
-Single data source for everything: the public, unauthenticated MLB Stats API
-(`https://statsapi.mlb.com`) — no API key exists or is needed.
+The dashboard now includes separate **MLB, NFL, and NBA pages**, selected from
+the top navigation. MLB has the working prediction pipeline; **NFL and NBA
+are not active yet** and display that notice prominently. Their team directories
+and matchup previews are available, but live schedules, results, predictions,
+and simulations are still coming soon.
+
+MLB data comes from the public, unauthenticated MLB Stats API
+(`https://statsapi.mlb.com`). NFL/NBA team names and logo URLs come from ESPN's
+public team API, with home-venue corrections checked against league and team
+sources. No API keys are required.
 
 ## Setup (Windows / PowerShell)
 
@@ -44,16 +52,7 @@ pip install -r requirements.txt
 - **A verification / leakage-audit suite** — standalone gates for every stage
   (`src/audit_leakage.py`, `src/verify_*.py`, `scripts/verify_*.py`).
 
-## Full data build (first-time setup)
-
-NFL/NBA team metadata is checked in under `data/teams/`, so their pages do not
-require the MLB data build or any API calls. Logos load from ESPN's image CDN.
-To refresh names, logos, and venues from ESPN's public team API, run
-`python -m scripts.update_sport_teams --as-of YYYY-MM-DD` with the retrieval date.
-Per-team source URLs and the snapshot date are saved with the metadata.
-ESPN's franchise entries sometimes retain former venues; reviewed corrections
-and primary-source links live in `data/teams/venue_overrides.json` and are applied
-by the updater. Recheck those corrections when refreshing for a new season.
+## MLB data build (first-time setup)
 
 All commands run from this folder (`mlb-elo/`), with the venv active. Each stage
 feeds the next.
@@ -78,7 +77,12 @@ the build — `scripts/run_refresh.py` (or just opening the app) keeps data curr
 streamlit run app.py
 ```
 
-Four tabs:
+Use the top navigation to switch between **MLB**, **NFL**, and **NBA**. Each page
+has the same five tabs: **Today's slate**, **Season results**, **Season
+projection**, **H2H Sim**, and **Methods**. MLB is the default page; each sport
+loads independently.
+
+### MLB
 
 1. **Today's slate** — every game today as `(logo) away @ (logo) home`, with the
    probable pitcher under each team, the venue and its city, a Game 1/Game 2
@@ -86,16 +90,57 @@ Four tabs:
    bold. A "Data current as of …" line shows the last refresh; **Refresh now**
    forces a full refresh. Team logos come from MLB's static CDN (the browser
    needs internet). Click into a game to see all three models side by side.
-2. **Season projection** — pick a foreground model (Calibrated Gradient Boosting
+2. **Season results** — actual regular-season wins, losses, winning percentage,
+   games back, and clinch status for all 30 teams, grouped by division using
+   MLB's official ordering. A season-over banner appears after MLB's published
+   regular-season end date and disappears when the next regular season begins.
+   During the offseason, the results tab keeps showing the completed season.
+3. **Season projection** — pick a foreground model (Calibrated Gradient Boosting
    by default, or Logistic Regression / Elo) and optionally compare others, then
    **Run projection** to Monte-Carlo the rest of the season: projected win
    totals, division/wild-card/playoff odds, pennant and title odds. The ML
    models build as-of-today team features once (~a couple of minutes, then
    cached); Elo is instant. Button-gated so a page load never blocks.
-3. **H2H Sim** — pick two teams, a format (single game through best-of-7 World
+4. **H2H Sim** — pick two teams, a format (single game through best-of-7 World
    Series), and the host, and get the series win probability under the selected
    model (Elo is instant; ML builds the two teams' features in seconds).
-4. **Methods** — a plain-language write-up of the model.
+5. **Methods** — a plain-language write-up of the model.
+
+### NFL and NBA previews
+
+Both pages display **not active yet** at the top. The available features are:
+
+- **Today's slate** — a coming-soon schedule message followed by a searchable
+  directory of all **32 NFL teams** or **30 NBA teams**. Search by team name,
+  abbreviation, home venue, or city. Compact logos beside team names mirror
+  the MLB styling; each row lists the team's home stadium or arena.
+- **Season results** — a placeholder for future official standings.
+- **Season projection** — a placeholder with disabled model and simulation
+  controls until sport-specific models are connected.
+- **H2H Sim** — working away/home team selectors and a visual matchup preview,
+  with both logos and the selected home team's venue above the matchup.
+  A team cannot play itself. Simulation remains disabled; no probabilities
+  or results are generated.
+- **Methods** — explains the preview status, planned matchup display, and
+  team-directory sources and snapshot date.
+
+Team names and venues are stored locally, so these pages do not require the
+MLB data build or live API calls. Logos load from ESPN's CDN and need internet.
+
+### Updating NFL/NBA team metadata
+
+The checked-in snapshots under `data/teams/` were retrieved on **September 30,
+2026**. To refresh them, use the actual retrieval date:
+
+```powershell
+python -m scripts.update_sport_teams --as-of YYYY-MM-DD
+```
+
+The updater saves per-team source URLs and the snapshot date. ESPN's franchise
+entries sometimes retain former venues; reviewed corrections and primary-source
+links live in `data/teams/venue_overrides.json` and are applied by the updater.
+Recheck those corrections when refreshing for a new season. This updates team
+metadata only; it does not activate NFL/NBA predictions or connect live feeds.
 
 ## Prediction models
 
@@ -182,7 +227,8 @@ earlier season and keep the current season sealed.
 
 ## Refreshing data
 
-The app refreshes itself — no scheduler and no morning ritual. The one gate is
+The MLB page refreshes its data automatically. NFL/NBA metadata uses the manual
+snapshot updater described above. The MLB refresh gate is
 `src/daily_refresh.py::refresh_if_stale`; on open it runs a staleness-gated,
 fail-closed chain against the single unified table:
 
@@ -238,8 +284,10 @@ python scripts/verify_games_equivalence.py  # the games.csv migration proof
 python -m pytest
 ```
 
-Unit tests cover the Elo math, the simulation engine and bracket, the matchup
-math, `games_full`/boxscore ingest, and the games-data accessors.
+Tests cover the Elo math, the simulation engine and bracket, the matchup
+math, `games_full`/boxscore ingest, and the games-data accessors. Streamlit tests
+also exercise the NFL/NBA previews with network access blocked: inactive
+notices, five-tab layouts, team search, logos, and home-venue selection.
 
 ## Model notes
 
@@ -277,7 +325,12 @@ update`) — the root `conftest.py` and `src/__init__.py` make that work for
 pytest and plain scripts alike.
 
 **App & Elo**
-- `app.py` — the Streamlit dashboard (slate / projection / H2H / Methods tabs).
+- `app.py` — Streamlit entry point and top-level MLB/NFL/NBA navigation.
+- `app_pages/mlb.py` — the working MLB dashboard and its five tabs.
+- `app_pages/nfl.py` / `app_pages/nba.py` — NFL/NBA preview page entry points.
+- `src/sport_ui.py` — shared NFL/NBA tab layout, inactive notices, and controls.
+- `src/sport_teams.py` — local team-directory loader and logo/venue display helpers.
+- `src/season_results.py` — MLB season status and official regular-season standings.
 - `src/elo.py` — pure Elo math; no I/O, no network.
 - `src/build_ratings.py` — chronological replay of the Elo window into ratings.
 - `src/mlb_api.py` — shared HTTP session, throttle, season-date lookups.
@@ -324,9 +377,18 @@ pytest and plain scripts alike.
   `scripts/verify_live_vs_historical.py`, `scripts/audit_park_leakage.py`,
   `scripts/retrain_withpark.py`, `scripts/validate_ml_sim.py`,
   `scripts/run_baselines.py`, `scripts/verify_games_equivalence.py`.
-- `tests/` — unit tests (Elo, simulation, matchup, ingest, games-data).
+- `tests/` — unit tests (Elo, simulation, matchup, ingest, games-data) and
+  NFL/NBA preview UI tests (`tests/test_sport_ui.py`).
 
 ## Data files
+
+**NFL/NBA team metadata**
+
+- `data/teams/nfl.json` / `data/teams/nba.json` — team names, IDs, logo URLs,
+  home venues, locations, source URLs, and snapshot dates.
+- `data/teams/venue_overrides.json` — reviewed venue corrections and their sources.
+- `scripts/update_sport_teams.py` — refreshes both team snapshots from ESPN and
+  applies the reviewed venue corrections.
 
 **Tables**
 - `data/games_full.csv` — the unified game table and single source of truth

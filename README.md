@@ -34,13 +34,26 @@ pip install -r requirements.txt
   `src/standings.py`, `src/season_schedule.py`, `src/playoffs.py`).
 - **Head-to-head tool** — single game or any series format between two teams
   under any model (`src/matchup.py`).
-- **Dashboard** — four tabs over all of the above (`app.py`).
+- **Dashboard** — MLB, NFL, and NBA pages via top navigation (`app.py`). MLB
+  retains its five tabs in `app_pages/mlb.py`. NFL and NBA mirror those tabs
+  with clearly marked previews; predictions and live results are not connected.
+  Their searchable team directories and H2H previews show all 32 NFL / 30 NBA
+  teams with logos and home venues.
 - **Self-maintaining data** — a staleness-gated, fail-closed on-open refresh
   (`src/daily_refresh.py`).
 - **A verification / leakage-audit suite** — standalone gates for every stage
   (`src/audit_leakage.py`, `src/verify_*.py`, `scripts/verify_*.py`).
 
 ## Full data build (first-time setup)
+
+NFL/NBA team metadata is checked in under `data/teams/`, so their pages do not
+require the MLB data build or any API calls. Logos load from ESPN's image CDN.
+To refresh names, logos, and venues from ESPN's public team API, run
+`python -m scripts.update_sport_teams --as-of YYYY-MM-DD` with the retrieval date.
+Per-team source URLs and the snapshot date are saved with the metadata.
+ESPN's franchise entries sometimes retain former venues; reviewed corrections
+and primary-source links live in `data/teams/venue_overrides.json` and are applied
+by the updater. Recheck those corrections when refreshing for a new season.
 
 All commands run from this folder (`mlb-elo/`), with the venv active. Each stage
 feeds the next.

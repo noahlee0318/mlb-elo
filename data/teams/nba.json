@@ -1,0 +1,319 @@
+{
+  "league": "NBA",
+  "as_of": "2026-09-30",
+  "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams",
+  "teams": [
+    {
+      "id": "1",
+      "name": "Atlanta Hawks",
+      "abbreviation": "ATL",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+      "venue": "State Farm Arena",
+      "city": "Atlanta",
+      "region": "GA",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/1"
+    },
+    {
+      "id": "2",
+      "name": "Boston Celtics",
+      "abbreviation": "BOS",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
+      "venue": "TD Garden",
+      "city": "Boston",
+      "region": "MA",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/2"
+    },
+    {
+      "id": "17",
+      "name": "Brooklyn Nets",
+      "abbreviation": "BKN",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/bkn.png",
+      "venue": "Barclays Center",
+      "city": "Brooklyn",
+      "region": "NY",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/17",
+      "venue_source": "https://nbatickets.nba.com/tickets/",
+      "venue_verified_on": "2026-09-30"
+    },
+    {
+      "id": "30",
+      "name": "Charlotte Hornets",
+      "abbreviation": "CHA",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/cha.png",
+      "venue": "Spectrum Center",
+      "city": "Charlotte",
+      "region": "NC",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/30"
+    },
+    {
+      "id": "4",
+      "name": "Chicago Bulls",
+      "abbreviation": "CHI",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/chi.png",
+      "venue": "United Center",
+      "city": "Chicago",
+      "region": "IL",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/4"
+    },
+    {
+      "id": "5",
+      "name": "Cleveland Cavaliers",
+      "abbreviation": "CLE",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/cle.png",
+      "venue": "Rocket Arena",
+      "city": "Cleveland",
+      "region": "OH",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/5"
+    },
+    {
+      "id": "6",
+      "name": "Dallas Mavericks",
+      "abbreviation": "DAL",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/dal.png",
+      "venue": "American Airlines Center",
+      "city": "Dallas",
+      "region": "TX",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/6"
+    },
+    {
+      "id": "7",
+      "name": "Denver Nuggets",
+      "abbreviation": "DEN",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/den.png",
+      "venue": "Ball Arena",
+      "city": "Denver",
+      "region": "CO",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/7"
+    },
+    {
+      "id": "8",
+      "name": "Detroit Pistons",
+      "abbreviation": "DET",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/det.png",
+      "venue": "Little Caesars Arena",
+      "city": "Detroit",
+      "region": "MI",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8",
+      "venue_source": "https://nbatickets.nba.com/tickets/",
+      "venue_verified_on": "2026-09-30"
+    },
+    {
+      "id": "9",
+      "name": "Golden State Warriors",
+      "abbreviation": "GS",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
+      "venue": "Chase Center",
+      "city": "San Francisco",
+      "region": "CA",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/9",
+      "venue_source": "https://nbatickets.nba.com/tickets/",
+      "venue_verified_on": "2026-09-30"
+    },
+    {
+      "id": "10",
+      "name": "Houston Rockets",
+      "abbreviation": "HOU",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
+      "venue": "Toyota Center (Houston)",
+      "city": "Houston",
+      "region": "TX",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/10"
+    },
+    {
+      "id": "11",
+      "name": "Indiana Pacers",
+      "abbreviation": "IND",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/ind.png",
+      "venue": "Gainbridge Fieldhouse",
+      "city": "Indianapolis",
+      "region": "IN",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/11"
+    },
+    {
+      "id": "12",
+      "name": "LA Clippers",
+      "abbreviation": "LAC",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
+      "venue": "Intuit Dome",
+      "city": "Inglewood",
+      "region": "CA",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/12",
+      "venue_source": "https://nbatickets.nba.com/tickets/",
+      "venue_verified_on": "2026-09-30"
+    },
+    {
+      "id": "13",
+      "name": "Los Angeles Lakers",
+      "abbreviation": "LAL",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
+      "venue": "crypto.com Arena",
+      "city": "Los Angeles",
+      "region": "CA",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13"
+    },
+    {
+      "id": "29",
+      "name": "Memphis Grizzlies",
+      "abbreviation": "MEM",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
+      "venue": "FedExForum",
+      "city": "Memphis",
+      "region": "TN",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/29"
+    },
+    {
+      "id": "14",
+      "name": "Miami Heat",
+      "abbreviation": "MIA",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
+      "venue": "Kaseya Center",
+      "city": "Miami",
+      "region": "FL",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/14"
+    },
+    {
+      "id": "15",
+      "name": "Milwaukee Bucks",
+      "abbreviation": "MIL",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/mil.png",
+      "venue": "Fiserv Forum",
+      "city": "Milwaukee",
+      "region": "WI",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/15",
+      "venue_source": "https://nbatickets.nba.com/tickets/",
+      "venue_verified_on": "2026-09-30"
+    },
+    {
+      "id": "16",
+      "name": "Minnesota Timberwolves",
+      "abbreviation": "MIN",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/min.png",
+      "venue": "Target Center",
+      "city": "Minneapolis",
+      "region": "MN",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/16"
+    },
+    {
+      "id": "3",
+      "name": "New Orleans Pelicans",
+      "abbreviation": "NO",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
+      "venue": "Smoothie King Center",
+      "city": "New Orleans",
+      "region": "LA",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/3"
+    },
+    {
+      "id": "18",
+      "name": "New York Knicks",
+      "abbreviation": "NY",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
+      "venue": "Madison Square Garden",
+      "city": "New York",
+      "region": "NY",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/18"
+    },
+    {
+      "id": "25",
+      "name": "Oklahoma City Thunder",
+      "abbreviation": "OKC",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
+      "venue": "Paycom Center",
+      "city": "Oklahoma City",
+      "region": "OK",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/25"
+    },
+    {
+      "id": "19",
+      "name": "Orlando Magic",
+      "abbreviation": "ORL",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/orl.png",
+      "venue": "Kia Center",
+      "city": "Orlando",
+      "region": "FL",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/19"
+    },
+    {
+      "id": "20",
+      "name": "Philadelphia 76ers",
+      "abbreviation": "PHI",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
+      "venue": "Xfinity Mobile Arena",
+      "city": "Philadelphia",
+      "region": "PA",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/20"
+    },
+    {
+      "id": "21",
+      "name": "Phoenix Suns",
+      "abbreviation": "PHX",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/phx.png",
+      "venue": "Mortgage Matchup Center",
+      "city": "Phoenix",
+      "region": "AZ",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/21"
+    },
+    {
+      "id": "22",
+      "name": "Portland Trail Blazers",
+      "abbreviation": "POR",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/por.png",
+      "venue": "Moda Center",
+      "city": "Portland",
+      "region": "OR",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/22"
+    },
+    {
+      "id": "23",
+      "name": "Sacramento Kings",
+      "abbreviation": "SAC",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+      "venue": "Golden 1 Center",
+      "city": "Sacramento",
+      "region": "CA",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/23",
+      "venue_source": "https://nbatickets.nba.com/tickets/",
+      "venue_verified_on": "2026-09-30"
+    },
+    {
+      "id": "24",
+      "name": "San Antonio Spurs",
+      "abbreviation": "SA",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/sa.png",
+      "venue": "Frost Bank Center",
+      "city": "San Antonio",
+      "region": "TX",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/24"
+    },
+    {
+      "id": "28",
+      "name": "Toronto Raptors",
+      "abbreviation": "TOR",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
+      "venue": "Scotiabank Arena",
+      "city": "Toronto",
+      "region": "ON",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28"
+    },
+    {
+      "id": "26",
+      "name": "Utah Jazz",
+      "abbreviation": "UTAH",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
+      "venue": "Delta Center",
+      "city": "Salt Lake City",
+      "region": "UT",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/26"
+    },
+    {
+      "id": "27",
+      "name": "Washington Wizards",
+      "abbreviation": "WSH",
+      "logo": "https://a.espncdn.com/i/teamlogos/nba/500/wsh.png",
+      "venue": "Capital One Arena",
+      "city": "Washington",
+      "region": "DC",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/27"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "nfl": {
+    "24": {"venue": "SoFi Stadium", "city": "Inglewood", "region": "CA", "venue_source": "https://www.chargers.com/sofi-stadium/parking/faq", "venue_verified_on": "2026-09-30"},
+    "14": {"venue": "SoFi Stadium", "city": "Inglewood", "region": "CA", "venue_source": "https://www.therams.com/stadium/sofi-stadium", "venue_verified_on": "2026-09-30"}
+  },
+  "nba": {
+    "17": {"venue": "Barclays Center", "city": "Brooklyn", "region": "NY", "venue_source": "https://nbatickets.nba.com/tickets/", "venue_verified_on": "2026-09-30"},
+    "9": {"venue": "Chase Center", "city": "San Francisco", "region": "CA", "venue_source": "https://nbatickets.nba.com/tickets/", "venue_verified_on": "2026-09-30"},
+    "12": {"venue": "Intuit Dome", "city": "Inglewood", "region": "CA", "venue_source": "https://nbatickets.nba.com/tickets/", "venue_verified_on": "2026-09-30"},
+    "15": {"venue": "Fiserv Forum", "city": "Milwaukee", "region": "WI", "venue_source": "https://nbatickets.nba.com/tickets/", "venue_verified_on": "2026-09-30"},
+    "23": {"venue": "Golden 1 Center", "city": "Sacramento", "region": "CA", "venue_source": "https://nbatickets.nba.com/tickets/", "venue_verified_on": "2026-09-30"},
+    "8": {"venue": "Little Caesars Arena", "city": "Detroit", "region": "MI", "venue_source": "https://nbatickets.nba.com/tickets/", "venue_verified_on": "2026-09-30"}
+  }
+}

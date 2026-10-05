@@ -1,5 +1,8 @@
 # mlb-elo
 
+**Live dashboard:** [predictions.noahlee.org](https://predictions.noahlee.org/)
+([direct Streamlit app](https://noahlee-predictions.streamlit.app/)).
+
 Win-probability modeling for the 30 MLB teams, end to end: **Elo ratings**, two
 **supervised ML models** (logistic regression and a calibrated gradient-boosting
 model), a **Monte Carlo season simulator** with a full playoff bracket, and a
@@ -81,6 +84,23 @@ After this, the dashboard runs and refreshes itself. Day to day you never re-run
 the build — `scripts/run_refresh.py` (or just opening the app) keeps data current.
 
 ## Dashboard
+
+### Free hosting
+
+The app runs on Streamlit Community Cloud from this repository's `main` branch,
+with `app.py` as the entry point and Python 3.14. Updates pushed to `main` are
+picked up by Streamlit. The custom address `predictions.noahlee.org` serves the
+static page in `deploy/cloudflare/index.html`, which embeds the public Streamlit
+app and provides a direct-app link. Cloudflare's `sports-predictions` project
+hosts that page as static assets on the Free plan; it does not run Python.
+
+To change the embedding page, upload the updated `index.html` to that Cloudflare
+project. Its custom domain and HTTPS are managed by Cloudflare. The Streamlit
+host is subject to Community Cloud's free resource limits and may need to wake
+after inactivity. Runtime data refreshes are local to the hosted instance;
+fresh deployments can restore the committed bootstrap snapshots.
+
+### Run locally
 
 ```powershell
 streamlit run app.py

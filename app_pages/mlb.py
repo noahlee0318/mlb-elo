@@ -12,6 +12,12 @@ from datetime import datetime
 import pandas as pd
 import streamlit as st
 
+from src.deployment_data import ensure_deployment_data
+
+# A cloud checkout has no generated CSVs. Restore the checked-in public-data
+# snapshot before importing modules that derive their feature schema from it.
+ensure_deployment_data()
+
 from src.matchup import (FORMATS, check_matchup, season_sim_occurrences,
                          simulate_outcomes, win_probability)
 from src.playoffs import series_win_prob

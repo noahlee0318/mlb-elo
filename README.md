@@ -54,6 +54,15 @@ pip install -r requirements.txt
 
 ## MLB data build (first-time setup)
 
+Fresh hosted checkouts restore the compressed public-data snapshots in
+`data/bootstrap/` before loading the MLB page. This supplies `features.csv`,
+`pitcher_games.csv`, and `batter_games.csv`, which are otherwise ignored by Git.
+Existing CSVs are preserved so a restart does not undo live refreshes. To
+refresh these bundles after rebuilding data, run
+`python -m scripts.bundle_deployment_data --source-data data` and commit the
+updated `.gz` files. The bundles preserve the existing feature/model pipeline;
+the commands below remain the way to rebuild it from source.
+
 All commands run from this folder (`mlb-elo/`), with the venv active. Each stage
 feeds the next.
 

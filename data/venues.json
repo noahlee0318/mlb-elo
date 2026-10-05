@@ -1,0 +1,242 @@
+{
+ "1": {
+  "name": "Angel Stadium",
+  "tz_id": "America/Los_Angeles",
+  "offset": -7
+ },
+ "2": {
+  "name": "Oriole Park at Camden Yards",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "3": {
+  "name": "Fenway Park",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "4": {
+  "name": "Rate Field",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "2756": {
+  "name": "Sahlen Field",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "5": {
+  "name": "Progressive Field",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "5381": {
+  "name": "London Stadium",
+  "tz_id": "Europe/London",
+  "offset": 1
+ },
+ "7": {
+  "name": "Kauffman Stadium",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "2889": {
+  "name": "Busch Stadium",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "4169": {
+  "name": "loanDepot park",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "10": {
+  "name": "Oakland Coliseum",
+  "tz_id": "America/Los_Angeles",
+  "offset": -7
+ },
+ "12": {
+  "name": "Tropicana Field",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "13": {
+  "name": "Choctaw Stadium",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "2701": {
+  "name": "Walmart Park",
+  "tz_id": "America/Monterrey",
+  "offset": -6
+ },
+ "5325": {
+  "name": "Globe Life Field",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "14": {
+  "name": "Rogers Centre",
+  "tz_id": "America/Toronto",
+  "offset": -4
+ },
+ "15": {
+  "name": "Chase Field",
+  "tz_id": "America/Phoenix",
+  "offset": -7
+ },
+ "16": {
+  "name": "Turner Field",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "17": {
+  "name": "Wrigley Field",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "5010": {
+  "name": "Fort Bragg Field",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "19": {
+  "name": "Coors Field",
+  "tz_id": "America/Denver",
+  "offset": -6
+ },
+ "22": {
+  "name": "UNIQLO Field at Dodger Stadium",
+  "tz_id": "America/Los_Angeles",
+  "offset": -7
+ },
+ "2392": {
+  "name": "Daikin Park",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "3289": {
+  "name": "Citi Field",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "2394": {
+  "name": "Comerica Park",
+  "tz_id": "America/Detroit",
+  "offset": -4
+ },
+ "2395": {
+  "name": "Oracle Park",
+  "tz_id": "America/Los_Angeles",
+  "offset": -7
+ },
+ "2523": {
+  "name": "George M. Steinbrenner Field",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "5340": {
+  "name": "Estadio Alfredo Harp Helu",
+  "tz_id": "America/Mexico_City",
+  "offset": -6
+ },
+ "2397": {
+  "name": "Tokyo Dome",
+  "tz_id": "Asia/Tokyo",
+  "offset": 9
+ },
+ "5150": {
+  "name": "Gocheok Sky Dome",
+  "tz_id": "Asia/Seoul",
+  "offset": 9
+ },
+ "31": {
+  "name": "PNC Park",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "32": {
+  "name": "American Family Field",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "2529": {
+  "name": "Sutter Health Park",
+  "tz_id": "America/Los_Angeles",
+  "offset": -7
+ },
+ "4705": {
+  "name": "Truist Park",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "2535": {
+  "name": "Hiram Bithorn Stadium",
+  "tz_id": "America/Puerto_Rico",
+  "offset": -4
+ },
+ "680": {
+  "name": "T-Mobile Park",
+  "tz_id": "America/Los_Angeles",
+  "offset": -7
+ },
+ "2536": {
+  "name": "TD Ballpark",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "2602": {
+  "name": "Great American Ball Park",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "5355": {
+  "name": "Las Vegas Ballpark",
+  "tz_id": "America/Los_Angeles",
+  "offset": -7
+ },
+ "3309": {
+  "name": "Nationals Park",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "3949": {
+  "name": "Rickwood Field",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "2735": {
+  "name": "Journey Bank Ballpark",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "3312": {
+  "name": "Target Field",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "3313": {
+  "name": "Yankee Stadium",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "6130": {
+  "name": "Bristol Motor Speedway",
+  "tz_id": "America/New_York",
+  "offset": -4
+ },
+ "5365": {
+  "name": "TD Ameritrade Park",
+  "tz_id": "America/Chicago",
+  "offset": -5
+ },
+ "2680": {
+  "name": "Petco Park",
+  "tz_id": "America/Los_Angeles",
+  "offset": -7
+ },
+ "2681": {
+  "name": "Citizens Bank Park",
+  "tz_id": "America/New_York",
+  "offset": -4
+ }
+}
